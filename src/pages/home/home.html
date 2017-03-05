@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Leadscore!</h2>
+  <p>
+    Please Login to continue
+  </p>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input [(ngModel)]="login.username" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input [(ngModel)]="login.password" type="password"></ion-input>
+    </ion-item>
+    <br/>
+    <p style="color:red;">
+      &nbsp;{{errorMessage}} 
+    </p>
+    <button ion-button id="submitButton" (click)="submitLogin()">Submit</button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the Contacts page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contacts
+    </ion-title>
+    <button ion-button id="logoutButton" class="smallButton" (click)="logout()" style="float: right;">Logout</button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding-landscape>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts">
+      <h2>{{contact.displayName}}</h2>
+      <p *ngIf="contact.phoneNumbers != null && contact.phoneNumbers[0].number != null">
+        {{contact.phoneNumbers[0].number}}
+      </p>
+      <p *ngIf="contact.emails != null && contact.emails[0].email != null">
+        {{contact.emails[0].email}}
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>
