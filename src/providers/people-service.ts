@@ -20,7 +20,7 @@ export class PeopleService {
   
   
   login(loginDetails : LoginDetails) : Observable<Response> {
-    console.log("loginDetails Received: " + loginDetails.username + "/" + loginDetails.password);
+    //console.log("loginDetails Received: " + loginDetails.username + "/" + loginDetails.password);
     return this.http.post('https://internal-api-staging-lb.interact.io/v2/login', loginDetails);
   }
   

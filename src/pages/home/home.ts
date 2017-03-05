@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
-import {ContactsPage} from '../contacts/contacts';
-
-import {PeopleService, LoginDetails} from '../../providers/people-service';
+import { ContactsPage } from '../contacts/contacts';
+import { PeopleService, LoginDetails } from '../../providers/people-service';
 
 @Component({
   selector: 'page-home',
@@ -24,7 +21,7 @@ export class HomePage {
   }
   
   submitLogin() {
-    console.log("login: " + this.login.username + "/" + this.login.password);
+    //console.log("login: " + this.login.username + "/" + this.login.password);
     this.peopleService.login(this.login).subscribe(data => {
       this.errorMessage = "";
       var body = data.json();
